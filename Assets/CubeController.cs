@@ -32,7 +32,7 @@ public class CubeController : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        if(other.gameObject.tag == "CubeTag")
+        if(other.gameObject.tag == "CubeTag" || other.gameObject.tag == "GroundTag")
         {
             GetComponent<AudioSource>().Play();
         }
