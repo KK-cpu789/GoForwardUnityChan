@@ -30,8 +30,11 @@ public class CubeController : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter2D(Collision2D CubePrefab)
+    void OnCollisionEnter2D(Collision2D other)
     {
-        GetComponent<AudioSource>().Play();
+        if(other.gameObject.tag == "CubeTag")
+        {
+            GetComponent<AudioSource>().Play();
+        }
     }
 }
